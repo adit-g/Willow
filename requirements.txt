@@ -1,0 +1,14 @@
+gtts
+playsound
+speechrecognition
+tensorflow==2.10.0
+python_speech_features
+scipy
+sounddevice
+pyaudio
+librosa
+bert-for-tf2
+python-dateutil
+num2words
+samplerate
+PyObjC
