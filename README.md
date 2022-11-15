@@ -10,4 +10,4 @@ how to run willow:
 6. run "python3 test_willow_full.py" and see what willow can do!
 
 
-Note: willow has only been tested on MacOS and a raspberry pi 3B+ running Raspbian Bullseye, any other platform may or may not support willow
+Note: willow has only been tested on MacOS and a raspberry pi 3B+ running Raspbian Bullseye, any other platform or device may or may not support willow
