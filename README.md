@@ -1,5 +1,10 @@
 # willow
 
+## Project Description
+
+I created this program to provide my room with a virtual assistant better than Amazon Alexa or Google Home. As of now, it can run 24/7 on my raspberry pi and provide me basic alarm functionality, but I am working on making it much more than that. Coding my own assistant gives me flexibility to implement any skill I could possibly want on it, whereas with commercially available assistants I am limited to their skillset. Additionally, certain features on Alexa or Google require the user to pay extra, such as on-demand music streaming, but I wish to make my assistant free for me and any other users who may clone this repository.
+
+
 how to run willow:
 
 1. clone the repository into a folder locally
