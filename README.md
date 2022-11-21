@@ -25,3 +25,7 @@ This project has been developed entirely in Python, including the designing and 
 DISCLAIMER: The wake word model was trained on a very small dataset of voices(just my friends and I), so there is a high chance that a new voice will not trigger a response from willow
 
 Note: willow has only been tested on MacOS and a raspberry pi 3B+ running Raspbian Bullseye, any other platform or device may or may not support willow
+
+
+https://user-images.githubusercontent.com/118241732/202987598-2bafcfca-0d06-4ccc-bc6a-230789093226.mp4
+
