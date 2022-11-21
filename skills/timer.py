@@ -3,7 +3,7 @@ from dateutil.relativedelta import relativedelta
 import pickle
 from num2words import num2words
 from speech_util import speak
-from parsers import is_numeric, look_for_fractions, \
+from utils.parsers import is_numeric, look_for_fractions, \
     invert_dict, ReplaceableNumber, partition_list, tokenize, Token, Normalizer
 
 class AlarmSkill:
@@ -13,7 +13,7 @@ class AlarmSkill:
         """Executed immediately after class is initialized"""
 
         # load alarm list that has been saved to disk
-        with open('utils/alarms.pkl', 'rb') as f:
+        with open('things/alarms.pkl', 'rb') as f:
             self.alarms : list = pickle.load(f)
         
         # Alarm list format: [ [
@@ -29,7 +29,7 @@ class AlarmSkill:
         self.alarms.sort(key=self.sort_func)
         self.prune()
 
-        with open('utils/alarms.pkl', 'wb') as f:
+        with open('things/alarms.pkl', 'wb') as f:
             pickle.dump(self.alarms, f)
         
         # load up recurrence data (data that allows an alarm to be repeated )
@@ -38,7 +38,7 @@ class AlarmSkill:
         self.day_dict = {'0': 'sunday', '1': 'monday', '2': 'tuesday', '3': 'wednesday', '4': 'thursday', \
             '5': 'friday', '6': 'saturday'}
         
-        with open('utils/recurring') as file:
+        with open('things/recurring') as file:
             data = file.read().replace('\n', ',')
             recurrence_list = data.split(',')
             self.recurrence_dict = {recurrence_list[i]: recurrence_list[i+1] for i in range(0, len(recurrence_list), 2)}
@@ -50,7 +50,7 @@ class AlarmSkill:
     def clear_alarms(self):
         """delete all alarms"""
         self.alarms = []
-        with open('utils/alarms.pkl', 'wb') as f:
+        with open('things/alarms.pkl', 'wb') as f:
             pickle.dump(self.alarms, f)
     
     def print_alarms(self):
@@ -101,7 +101,7 @@ class AlarmSkill:
     def alarm_remove(self, utr):
         """ Handles user utterance with intent 'alarm_remove' """
         self._alarm_remove(utr)
-        with open('utils/alarms.pkl', 'wb') as f:
+        with open('things/alarms.pkl', 'wb') as f:
             pickle.dump(self.alarms, f)
         print(self.alarms)
         
@@ -211,7 +211,7 @@ class AlarmSkill:
             self.alarms.append((time_data[0], None))
 
         self.alarms.sort(key=self.sort_func)
-        with open('utils/alarms.pkl', 'wb') as f:
+        with open('things/alarms.pkl', 'wb') as f:
             pickle.dump(self.alarms, f)
 
         print(self.alarms)
@@ -242,7 +242,7 @@ class AlarmSkill:
                     start_date += timedelta(days=1)
         
         self.alarms.sort(key=self.sort_func)
-        with open('utils/alarms.pkl', 'wb') as f:
+        with open('things/alarms.pkl', 'wb') as f:
             pickle.dump(self.alarms, f)
 
     def datetime_to_string(self, dt, recur=None):

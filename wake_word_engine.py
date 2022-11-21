@@ -21,7 +21,7 @@ class WakeWordEngine:
         self.resample_rate = 8000
         self.num_channels = 1
         self.num_mfcc = 16
-        self.model_path = 'wake_word_model_3.tflite'
+        self.model_path = 'models/wake_word_model_3.tflite'
         self.listen = False
         
         # Sliding window
@@ -37,7 +37,7 @@ class WakeWordEngine:
         """Pauses program until the word willow is detected from the user or an alarm is going off"""
 
         #load alarm list
-        with open('utils/alarms.pkl', 'rb') as f:
+        with open('things/alarms.pkl', 'rb') as f:
             als : list = pickle.load(f)
         al_list_is_empty = len(als) == 0
         alarm_going_off = False

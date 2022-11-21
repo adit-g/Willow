@@ -25,12 +25,12 @@ def transcribe():
 
 def speak(sentence):
     tts = gTTS(sentence)
-    tts.save('utils/sentence.mp3')
+    tts.save('things/sentence.mp3')
 
-    playsound("utils/sentence.mp3")
+    playsound("things/sentence.mp3")
 
 def ring_alarm():
-    playsound("utils/Google-Duo.mp3", False)
+    playsound("things/Google-Duo.mp3", False)
 
 
 

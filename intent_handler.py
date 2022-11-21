@@ -1,5 +1,5 @@
 
-from skills.padaos import IntentContainer
+from utils.padaos import IntentContainer
 from skills.spelling import SpellingSkill
 from skills.timer import AlarmSkill
 

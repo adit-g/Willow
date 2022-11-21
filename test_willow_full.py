@@ -14,7 +14,7 @@ wwe = WakeWordEngine()
 handler = IntentHandler()
 
 random = 8
-with open('utils/classes.pkl','rb') as file:
+with open('things/classes.pkl','rb') as file:
     classes = pickle.load(file)
 
 # currently willow runs for 8 commands and then exits the program

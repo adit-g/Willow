@@ -6,10 +6,10 @@ import tensorflow as tf
 import pickle
 import numpy as np
 
-with open('utils/tokenizer.pkl','rb') as file:
+with open('things/tokenizer.pkl','rb') as file:
     tokenizer = pickle.load(file)
 
-interpreter = tf.lite.Interpreter(model_path="bert/model.tflite")
+interpreter = tf.lite.Interpreter(model_path="models/model.tflite")
 interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
