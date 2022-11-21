@@ -26,8 +26,10 @@ DISCLAIMER: The wake word model was trained on a very small dataset of voices(ju
 
 Note: willow has only been tested on MacOS and a raspberry pi 3B+ running Raspbian Bullseye, any other platform or device may or may not support willow
 
-
+### Successful Test Demonstration
 
 https://user-images.githubusercontent.com/118241732/202987819-6b4795a2-137c-4ebd-98f8-d1df959c5c60.mp4
+
+(Sorry for the abysmal video quality, github required the size to be less than 10mb)
 
 
