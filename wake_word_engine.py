@@ -43,7 +43,7 @@ class WakeWordEngine:
         alarm_going_off = False
 
         print()
-        print('listening for willow...')
+        print('Say Willow...')
 
         #audio stream to detect willow        
         with sd.InputStream(channels=self.num_channels,

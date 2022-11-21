@@ -10,7 +10,7 @@ r = sr.Recognizer()
 
 def calibrate_mic():
     with sr.Microphone(sample_rate=samplerate) as source2:
-        print("calibrating... silence please")
+        print("Calibrating... Silence please")
         r.adjust_for_ambient_noise(source2, duration=2)
         print("done")
 
@@ -24,9 +24,9 @@ def transcribe():
     return text
 
 def speak(sentence):
+    print('out:', sentence)
     tts = gTTS(sentence)
     tts.save('things/sentence.mp3')
-
     playsound("things/sentence.mp3")
 
 def ring_alarm():

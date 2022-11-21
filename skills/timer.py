@@ -67,7 +67,6 @@ class AlarmSkill:
     def alarm_query(self, utr):
         """ Responds to user utterance that has the intent 'alarm_query' """
         data = self.extract_datetime_en(utr)
-        print(self.alarms)
 
         # if user specifies a specific time
         just_alarms = [alarm[0] for alarm in self.alarms]
@@ -103,7 +102,6 @@ class AlarmSkill:
         self._alarm_remove(utr)
         with open('things/alarms.pkl', 'wb') as f:
             pickle.dump(self.alarms, f)
-        print(self.alarms)
         
     # TODO: minor edge cases have not yet been accounted for
     def _alarm_remove(self, utr):
@@ -214,7 +212,6 @@ class AlarmSkill:
         with open('things/alarms.pkl', 'wb') as f:
             pickle.dump(self.alarms, f)
 
-        print(self.alarms)
         speak('alarm set for ' + self.datetime_to_string(time_data[0], recur))
 
     def prune(self):

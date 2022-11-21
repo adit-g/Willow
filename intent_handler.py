@@ -53,7 +53,6 @@ class IntentHandler:
 
         if bru:
             self.reg_skills['alarm'].prune()
-            self.reg_skills['alarm'].print_alarms()
             return True
         
         return False
