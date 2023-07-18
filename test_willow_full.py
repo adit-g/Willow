@@ -1,5 +1,10 @@
 """Runs the entire willow program"""
 
+print()
+print("Willow says hi!!!")
+print()
+print("[INFO] importing modules")
+
 from speech_util import calibrate_mic, transcribe, speak, ring_alarm
 from wake_word_engine import WakeWordEngine
 from willow import find_intent
@@ -7,6 +12,7 @@ from intent_handler import IntentHandler
 import pickle
 
 print('[INFO] modules imported')
+print()
 
 calibrate_mic()
 
