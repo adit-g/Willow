@@ -2,7 +2,7 @@
 An open-sourced virtual assistant (in-progress)
 ### Project Description
 This project has been developed entirely in Python, including the designing and training of the two machine learning models. They are described here: 
- * wake_word_model.tflite - A binary classifier CNN model which takes in a a second segment of audio and determines whether the word "willow" was spoken in the audio.
+ * wake_word_model.tflite - A binary classifier CNN model which takes in a 1 second segment of audio and determines whether the word "willow" was spoken in the audio.
     * Datasets: I asked all my friends and family to say the word willow 20 times, and I created a dataset using these audio clips for the positive class and background noise/random words I found online for the negative class.
     * Limitations: The positive class currently contains a very limited number of samples, and does not accurately represent a diverse demographic of accents and voices. The model is also sometimes prone to false activations.
 * model.tflite - A BERT model for intent classification using natural language processing. It takes in a sentences and returns 1 of 64 possible intents
