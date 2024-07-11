@@ -22,8 +22,8 @@ class AlarmSkill:
         #                       expiration date for recurring alarm : datetime or None
         #                        ], ... ]
         #
-        # NOTE: I probably should have implemented each alarm as a dict instead of a list 
-        #       but I'm not gonna bother fixing it cuz it works
+        # NOTE: I probably should have implemented each alarm as a dict instead of a list, 
+        #       will fix in a future version
 
         # ensure list is sorted and up to date
         self.alarms.sort(key=self.sort_func)
